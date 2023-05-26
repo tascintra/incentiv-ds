@@ -7,6 +7,11 @@ module.exports = {
   ],
   theme: {
     extend: {
+      lineHeight: {
+        4.5: '1.125rem',
+        7.5: '1.875rem',
+      },
+
       colors: {
         neutral: {
           200: '#E5E5E5',
