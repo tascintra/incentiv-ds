@@ -7,9 +7,14 @@ module.exports = {
   ],
   theme: {
     extend: {
+      fontSize: {
+        '2.5xl': ['1.75rem', '2.25rem']
+      },
+
       lineHeight: {
         4.5: '1.125rem',
         7.5: '1.875rem',
+        11: '2.75rem',
       },
 
       colors: {
