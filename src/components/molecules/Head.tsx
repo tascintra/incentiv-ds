@@ -7,7 +7,7 @@ interface MenuElement extends React.MenuHTMLAttributes<HTMLElement> {}
 
 export default function Head({ className, ...props }: MenuElement) {
   return (
-    <menu className={clsx('flex w-full gap-3', className)} {...props}>
+    <menu className={clsx('flex w-full gap-3 p-2', className)} {...props}>
       <li>
         <button>
           <Image src={MenuIcon} alt="Ícone Menu" />
