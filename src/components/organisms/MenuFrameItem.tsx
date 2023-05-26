@@ -2,7 +2,7 @@ import Image from 'next/image'
 import NotificationIcon from '@/assets/icon/notification.svg'
 import Text from '@/components/atoms/Text'
 
-type ItemProps = {
+interface ItemProps {
   icon: HTMLImageElement
   text: string
   iconAlt: string
