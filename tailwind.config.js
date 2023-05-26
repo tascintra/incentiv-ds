@@ -8,7 +8,7 @@ module.exports = {
   theme: {
     extend: {
       fontSize: {
-        '2.5xl': ['1.75rem', '2.25rem']
+        '2.5xl': ['1.75rem', '2.25rem'],
       },
 
       lineHeight: {
@@ -53,6 +53,10 @@ module.exports = {
             500: '#EF4444',
           },
         },
+      },
+
+      boxShadow: {
+        sidebar: '0px -148px 112px -5px rgba(10, 26, 43, 0.08)',
       },
     },
   },
