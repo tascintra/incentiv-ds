@@ -21,10 +21,10 @@ export default function IdentityFrame({ className, ...props }: Frame) {
     >
       <Image src={HospitalLogo} alt="Associação Hospitalar Pequeno Príncipe" />
       <div>
-        <Text smm className="text-gray-500">
+        <Text style='smm' className="text-gray-500">
           Olá! 👋
         </Text>
-        <Text smm className="text-gray-900">
+        <Text style='smm' className="text-gray-900">
           Associação Hospitalar...
         </Text>
       </div>
