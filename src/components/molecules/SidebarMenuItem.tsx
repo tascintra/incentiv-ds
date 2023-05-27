@@ -15,7 +15,7 @@ export default function SidebarMenuItem({ icon, text }: ItemProps) {
         className="flex gap-3 p-2 text-gray-500 hover:text-primary-500"
       >
         <Image src={icon} alt={`${text} ícone`} />
-        <Text style='smm'>{text}</Text>
+        <Text fontStyle='smm'>{text}</Text>
       </a>
     </li>
   )

@@ -2,11 +2,11 @@ import clsx from 'clsx'
 import { CommonTextProps } from '@/@types/types'
 
 interface Styles extends CommonTextProps {
-  style: 'xsr' | 'xsm' | 'smm' | 'smb' | 'mds' | 'xlb'
+  fontStyle: 'xsr' | 'xsm' | 'smm' | 'smb' | 'mds' | 'xlb'
 }
 
 export default function Text({
-  style,
+  fontStyle,
   children,
   className,
   ...props
@@ -21,7 +21,7 @@ export default function Text({
   }
 
   return (
-    <p className={clsx(textStyle[style], className)} {...props}>
+    <p className={clsx(textStyle[fontStyle], className)} {...props}>
       {children}
     </p>
   )

@@ -5,7 +5,7 @@ import IncentivLogo from '@/assets/logo/incentiv-logo.svg'
 
 interface MenuElement extends React.MenuHTMLAttributes<HTMLElement> {}
 
-export default function Head({ className, ...props }: MenuElement) {
+export default function NavHead({ className, ...props }: MenuElement) {
   return (
     <menu className={clsx('flex w-full gap-3 p-2', className)} {...props}>
       <li>
