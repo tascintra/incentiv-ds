@@ -57,6 +57,7 @@ module.exports = {
 
       boxShadow: {
         sidebar: '0px -148px 112px -5px rgba(10, 26, 43, 0.08)',
+        xs: '0px 1px 2px rgba(16, 24, 40, 0.05)',
       },
     },
   },
