@@ -3,14 +3,18 @@ import { CommonTextProps } from '@/@types/types'
 
 interface Styles extends CommonTextProps {
   fontStyle: 'xsr' | 'xsm' | 'smr' | 'smm' | 'sms' | 'smb' | 'mds' | 'xlb'
+  as?: 'p' | 'span'
 }
 
 export default function Text({
   fontStyle,
   children,
   className,
+  as = 'p',
   ...props
 }: Styles) {
+  const Comp = as
+
   const textStyle = {
     xsr: 'text-xs font-normal leading-4.5',
     xsm: 'text-xs font-medium leading-4.5',
@@ -23,8 +27,8 @@ export default function Text({
   }
 
   return (
-    <p className={clsx(textStyle[fontStyle], className)} {...props}>
+    <Comp className={clsx(textStyle[fontStyle], className)} {...props}>
       {children}
-    </p>
+    </Comp>
   )
 }
