@@ -18,12 +18,6 @@ module.exports = {
       },
 
       colors: {
-        neutral: {
-          200: '#E5E5E5',
-          300: '#D4D4D4',
-          400: '#A3A3A3',
-          500: '#737373',
-        },
         primary: {
           50: '#E8F1FC',
           500: '#1B74E4',
