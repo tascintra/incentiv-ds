@@ -7,9 +7,9 @@ import Button from '@/components/molecules/Button'
 
 export default function ProjectShowCaseHead() {
   return (
-    <div className="flex items-center gap-6">
+    <div className="flex w-full items-center gap-6">
       <Image src={VitrineProjeto} alt="Avatar do Projeto" />
-      <div className="w-full max-w-sm py-5">
+      <div className="w-full max-w-[370px] py-5">
         <Heading as="h2" fontStyle="xsb">
           Projeto Saúde Integral III
         </Heading>
@@ -33,7 +33,7 @@ export default function ProjectShowCaseHead() {
         fontStyle="smm"
         colorScheme="neutral"
         leftIcon={<Pencil />}
-        className="self-start"
+        className="ml-auto self-start"
       >
         Editar
       </Button>
