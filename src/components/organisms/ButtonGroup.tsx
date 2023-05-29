@@ -3,21 +3,24 @@ import { useState } from 'react'
 import clsx from 'clsx'
 import ButtonGroupBase from '@/components/molecules/ButtonGroupBase'
 
+interface baseItemsProps {
+  label: string
+  items: number
+}
+
 interface GroupProps
   extends React.DetailedHTMLProps<
     React.HTMLAttributes<HTMLUListElement>,
     HTMLUListElement
-  > {}
+  > {
+  baseItems: baseItemsProps[]
+}
 
-const baseItems = [
-  { label: 'Interesse', items: 5 },
-  { label: 'Negociação', items: 1 },
-  { label: 'Due Diligence', items: 0 },
-  { label: 'Formalização', items: 0 },
-  { label: 'Aporte', items: 0 },
-]
-
-export default function ButtonGroup({ className, ...props }: GroupProps) {
+export default function ButtonGroup({
+  className,
+  baseItems,
+  ...props
+}: GroupProps) {
   const [current, setCurrent] = useState(baseItems[0].label.toString())
 
   return (
