@@ -1,6 +1,7 @@
-import React from 'react'
-import ButtonGroupBase from '../molecules/ButtonGroupBase'
+'use client'
+import { useState } from 'react'
 import clsx from 'clsx'
+import ButtonGroupBase from '@/components/molecules/ButtonGroupBase'
 
 interface GroupProps
   extends React.DetailedHTMLProps<
@@ -9,14 +10,16 @@ interface GroupProps
   > {}
 
 const baseItems = [
-  { label: 'Interesse', items: 5, current: true },
-  { label: 'Negociação', items: 1, current: false },
-  { label: 'Due Diligence', items: 0, current: false },
-  { label: 'Formalização', items: 0, current: false },
-  { label: 'Aporte', items: 0, current: false },
+  { label: 'Interesse', items: 5 },
+  { label: 'Negociação', items: 1 },
+  { label: 'Due Diligence', items: 0 },
+  { label: 'Formalização', items: 0 },
+  { label: 'Aporte', items: 0 },
 ]
 
 export default function ButtonGroup({ className, ...props }: GroupProps) {
+  const [current, setCurrent] = useState(baseItems[0].label.toString())
+
   return (
     <ul
       className={clsx(
@@ -25,12 +28,13 @@ export default function ButtonGroup({ className, ...props }: GroupProps) {
       )}
       {...props}
     >
-      {baseItems.map(({ label, items, current }) => (
+      {baseItems.map(({ label, items }) => (
         <ButtonGroupBase
           key={label}
           label={label}
           items={items}
-          current={current}
+          current={current === label}
+          onClick={() => setCurrent(label)}
         />
       ))}
     </ul>
