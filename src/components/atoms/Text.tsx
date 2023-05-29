@@ -2,7 +2,7 @@ import clsx from 'clsx'
 import { CommonTextProps } from '@/@types/types'
 
 interface Styles extends CommonTextProps {
-  fontStyle: 'xsr' | 'xsm' | 'smr' | 'smm' | 'sms' | 'smb' | 'mds' | 'xlb'
+  fontStyle: 'xsr' | 'xsm' | 'smr' | 'smm' | 'sms' | 'smb' | 'mdm' | 'mds' | 'xlb'
   as?: 'p' | 'span'
 }
 
@@ -22,6 +22,7 @@ export default function Text({
     smm: 'text-sm font-medium',
     sms: 'text-sm font-semibold',
     smb: 'text-sm font-bold',
+    mdm: 'text-base font-medium',
     mds: 'text-base font-semibold',
     xlb: 'text-xl font-bold leading-7.5',
   }
