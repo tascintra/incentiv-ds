@@ -1,9 +1,16 @@
 import clsx from 'clsx'
-import { CommonTextProps } from '@/@types/types'
+import { TextStylesInterface } from '@/@types/types'
 
-interface Styles extends CommonTextProps {
-  fontStyle: 'xsr' | 'xsm' | 'smr' | 'smm' | 'sms' | 'smb' | 'mdm' | 'mds' | 'xlb'
-  as?: 'p' | 'span'
+export const textStyles = {
+  xsr: 'text-xs font-normal leading-4.5',
+  xsm: 'text-xs font-medium leading-4.5',
+  smr: 'text-sm font-normal',
+  smm: 'text-sm font-medium',
+  sms: 'text-sm font-semibold',
+  smb: 'text-sm font-bold',
+  mdm: 'text-base font-medium',
+  mds: 'text-base font-semibold',
+  xlb: 'text-xl font-bold leading-7.5',
 }
 
 export default function Text({
@@ -12,23 +19,11 @@ export default function Text({
   className,
   as = 'p',
   ...props
-}: Styles) {
+}: TextStylesInterface) {
   const Comp = as
 
-  const textStyle = {
-    xsr: 'text-xs font-normal leading-4.5',
-    xsm: 'text-xs font-medium leading-4.5',
-    smr: 'text-sm font-normal',
-    smm: 'text-sm font-medium',
-    sms: 'text-sm font-semibold',
-    smb: 'text-sm font-bold',
-    mdm: 'text-base font-medium',
-    mds: 'text-base font-semibold',
-    xlb: 'text-xl font-bold leading-7.5',
-  }
-
   return (
-    <Comp className={clsx(textStyle[fontStyle], className)} {...props}>
+    <Comp className={clsx(textStyles[fontStyle], className)} {...props}>
       {children}
     </Comp>
   )
