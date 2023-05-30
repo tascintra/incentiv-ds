@@ -1,5 +1,7 @@
 import clsx from 'clsx'
-import { TextStylesInterface } from '@/@types/types'
+import { TextStyles, CommonTextProps } from '@/@types/types'
+
+type TextProps = TextStyles & CommonTextProps
 
 export const textStyles = {
   xsr: 'text-xs font-normal leading-4.5',
@@ -19,7 +21,7 @@ export default function Text({
   className,
   as = 'p',
   ...props
-}: TextStylesInterface) {
+}: TextProps) {
   const Comp = as
 
   return (

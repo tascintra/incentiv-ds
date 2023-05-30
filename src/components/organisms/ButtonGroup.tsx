@@ -5,7 +5,7 @@ import ButtonGroupBase from '@/components/molecules/ButtonGroupBase'
 
 interface baseItemsProps {
   label: string
-  items: number
+  items?: string
 }
 
 interface GroupProps
@@ -14,11 +14,23 @@ interface GroupProps
     HTMLUListElement
   > {
   baseItems: baseItemsProps[]
+  fontSize?:
+    | 'xsr'
+    | 'xsm'
+    | 'smr'
+    | 'smm'
+    | 'sms'
+    | 'smb'
+    | 'mdm'
+    | 'mds'
+    | 'xlb'
+  as?: 'p' | 'span'
 }
 
 export default function ButtonGroup({
   className,
   baseItems,
+  fontSize,
   ...props
 }: GroupProps) {
   const [current, setCurrent] = useState(baseItems[0].label.toString())

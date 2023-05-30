@@ -25,11 +25,11 @@ interface companiesType {
 }
 
 const baseItemsBg = [
-  { label: 'Interesse', items: 5 },
-  { label: 'Negociação', items: 1 },
-  { label: 'Due Diligence', items: 0 },
-  { label: 'Formalização', items: 0 },
-  { label: 'Aporte', items: 0 },
+  { label: 'Interesse', items: '5' },
+  { label: 'Negociação', items: '1' },
+  { label: 'Due Diligence', items: '0' },
+  { label: 'Formalização', items: '0' },
+  { label: 'Aporte', items: '0' },
 ]
 
 const companiesInfo: companiesType[] = [
@@ -74,7 +74,7 @@ export default function Tela1() {
       <main className="w-full max-w-6xl px-8 py-6">
         <MainHead />
         <div className="flex items-center justify-between gap-8 pt-8">
-          <ButtonGroup baseItems={baseItemsBg} />
+          <ButtonGroup baseItems={baseItemsBg} className="text-gray-700" />
           <div className="flex w-full max-w-[218px] items-center gap-5">
             <OutlinedButton arrow>Ordenar por</OutlinedButton>
             <span className="h-[18px] border-r border-gray-300" />

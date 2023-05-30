@@ -5,7 +5,16 @@ export interface CommonTextProps {
   className?: string
 }
 
-export interface TextStylesInterface extends CommonTextProps {
-  fontStyle: 'xsr' | 'xsm' | 'smr' | 'smm' | 'sms' | 'smb' | 'mdm' | 'mds' | 'xlb'
+export type TextStyles = {
+  fontStyle:
+    | 'xsr'
+    | 'xsm'
+    | 'smr'
+    | 'smm'
+    | 'sms'
+    | 'smb'
+    | 'mdm'
+    | 'mds'
+    | 'xlb'
   as?: 'p' | 'span'
 }
