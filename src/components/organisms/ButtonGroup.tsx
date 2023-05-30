@@ -50,6 +50,7 @@ export default function ButtonGroup({
           items={items}
           current={current === label}
           onClick={() => setCurrent(label)}
+          fontSize={fontSize}
         />
       ))}
     </ul>

@@ -1,13 +1,15 @@
 import clsx from 'clsx'
-import { TextStylesInterface } from '@/@types/types'
+import { TextStyles } from '@/@types/types'
 import { textStyles } from '@/components/atoms/Text'
 
-interface ButtonProps extends TextStylesInterface {
+interface IButton extends React.DetailedHTMLProps<React.ButtonHTMLAttributes<HTMLButtonElement>, HTMLButtonElement> {
   colorScheme?: 'blue' | 'neutral'
   variant?: 'solid' | 'outline'
   leftIcon?: React.ReactNode
   rightIcon?: React.ReactNode
 }
+
+type ButtonProps = IButton & TextStyles
 
 export default function Button({
   className,
