@@ -1,3 +1,5 @@
+import PlusSign from '@/assets/icon/PlusSign'
+import ButtonOutlined from '@/components/molecules/ButtonOutlined'
 import Breadcrump from '@/components/organisms/Breadcrump'
 import ButtonGroup from '@/components/organisms/ButtonGroup'
 import ContributionsCard from '@/components/organisms/ContributionsCard'
@@ -19,12 +21,13 @@ export default function Tela3() {
       <main className="w-full max-w-3xl px-8 py-6">
         <Breadcrump />
         <ProjectShowcase className="mt-9" />
-        <div className="mt-10">
+        <div className="mt-10 flex items-center justify-between">
           <ButtonGroup
             baseItems={baseItemsBg}
             className="max-w-xs text-gray-900"
             fontSize="smm"
           />
+          <ButtonOutlined iconLeft={<PlusSign />}>Adicionar captação</ButtonOutlined>
         </div>
 
         <div className="mt-10 flex flex-col gap-4">

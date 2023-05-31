@@ -4,15 +4,6 @@ import clsx from 'clsx'
 import ContributionsCardHeader from '@/components/organisms/ContributionsCardHeader'
 import ContributionsCardContribution from '@/components/organisms/ContributionsCardContribution'
 
-interface ContributionsCardProps
-  extends React.DetailedHTMLProps<
-    React.HTMLAttributes<HTMLDivElement>,
-    HTMLDivElement
-  > {
-  infoHeader: string
-  infoText: string
-}
-
 const contributionsInfo = [
   [
     { infoHeader: 'Razão Social', infoText: 'Sulodonto LTDA' },
