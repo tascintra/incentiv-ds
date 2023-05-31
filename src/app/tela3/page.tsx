@@ -1,6 +1,6 @@
 import PlusSign from '@/assets/icon/PlusSign'
 import ButtonOutlined from '@/components/molecules/ButtonOutlined'
-import Breadcrump from '@/components/organisms/Breadcrump'
+import Breadcrumb from '@/components/organisms/Breadcrumb'
 import ButtonGroup from '@/components/organisms/ButtonGroup'
 import ContributionsCard from '@/components/organisms/ContributionsCard'
 import NavSidebar from '@/components/organisms/NavSidebar'
@@ -19,7 +19,7 @@ export default function Tela3() {
         <NavSidebar />
       </aside>
       <main className="w-full max-w-3xl px-8 py-6">
-        <Breadcrump />
+        <Breadcrumb />
         <ProjectShowcase className="mt-9" />
         <div className="mt-10 flex items-center justify-between">
           <ButtonGroup

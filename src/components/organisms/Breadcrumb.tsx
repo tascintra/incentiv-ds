@@ -2,7 +2,7 @@ import Image from 'next/image'
 import HomeIcon from '@/assets/icon/home.svg'
 import Text from '@/components/atoms/Text'
 
-export default function Breadcrump() {
+export default function Breadcrumb() {
   return (
     <div className="flex items-center">
       <Image
