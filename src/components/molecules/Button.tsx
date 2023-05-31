@@ -2,7 +2,11 @@ import clsx from 'clsx'
 import { TextStyles } from '@/@types/types'
 import { textStyles } from '@/components/atoms/Text'
 
-interface IButton extends React.DetailedHTMLProps<React.ButtonHTMLAttributes<HTMLButtonElement>, HTMLButtonElement> {
+interface IButton
+  extends React.DetailedHTMLProps<
+    React.ButtonHTMLAttributes<HTMLButtonElement>,
+    HTMLButtonElement
+  > {
   colorScheme?: 'blue' | 'neutral'
   variant?: 'solid' | 'outline'
   leftIcon?: React.ReactNode
@@ -14,7 +18,7 @@ type ButtonProps = IButton & TextStyles
 export default function Button({
   className,
   children,
-  fontStyle,
+  fontStyle = 'smm',
   colorScheme = 'blue',
   variant = 'outline',
   leftIcon,
