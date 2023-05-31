@@ -1,12 +1,13 @@
 import Image from 'next/image'
 import Link from 'next/link'
-import IncentivLogo from '@/assets/logo/incentiv-logo.svg'
+import IncentivLogoDs from '@/assets/logo/incentiv-ds.svg'
+
 import Text from '@/components/atoms/Text'
 
 export default function Home() {
   return (
     <main className="flex h-screen w-screen flex-col items-center justify-center gap-8">
-      <Image src={IncentivLogo} width={220} height={48} alt="Logo Incentiv" />
+      <Image src={IncentivLogoDs} width={332} height={96} alt="Logo Incentiv" />
       <ul className="flex divide-x divide-gray-300 overflow-hidden rounded-lg border border-gray-300 bg-white shadow-xs">
         <li>
           <Link href="/tela1">
