@@ -16,7 +16,7 @@ export const textStyles = {
 }
 
 export default function Text({
-  fontStyle,
+  fontStyle='smm',
   children,
   className,
   as = 'p',

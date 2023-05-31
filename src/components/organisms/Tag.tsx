@@ -1,8 +1,9 @@
-import Text from '@/components/atoms/Text'
-import Heart from '@/assets/icon/Heart'
 import clsx from 'clsx'
+import Heart from '@/assets/icon/Heart'
+import { TextStyles } from '@/@types/types'
+import Text from '@/components/atoms/Text'
 
-interface TagProps
+interface ITag
   extends React.DetailedHTMLProps<
     React.HTMLAttributes<HTMLDivElement>,
     HTMLDivElement
@@ -11,11 +12,18 @@ interface TagProps
   text: string
 }
 
+type TagProps = ITag & TextStyles
+
 const tagIcons = {
   heart: <Heart />,
 }
 
-export default function Tag({ className, icon, text }: TagProps) {
+export default function Tag({
+  className,
+  icon,
+  text,
+  fontStyle = 'xsr',
+}: TagProps) {
   return (
     <div
       className={clsx(
@@ -24,7 +32,7 @@ export default function Tag({ className, icon, text }: TagProps) {
       )}
     >
       {icon && tagIcons[icon]}
-      <Text fontStyle="xsr" className="text-gray-500">
+      <Text fontStyle={fontStyle} className="text-gray-500">
         {text}
       </Text>
     </div>

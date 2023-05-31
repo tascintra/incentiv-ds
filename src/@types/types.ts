@@ -6,7 +6,7 @@ export interface CommonTextProps {
 }
 
 export type TextStyles = {
-  fontStyle:
+  fontStyle?:
     | 'xsr'
     | 'xsm'
     | 'smr'
