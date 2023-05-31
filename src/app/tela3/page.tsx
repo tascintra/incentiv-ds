@@ -1,5 +1,6 @@
 import Breadcrump from '@/components/organisms/Breadcrump'
 import ButtonGroup from '@/components/organisms/ButtonGroup'
+import ContributionsCard from '@/components/organisms/ContributionsCard'
 import NavSidebar from '@/components/organisms/NavSidebar'
 import ProjectShowcase from '@/components/organisms/ProjectShowcase'
 import ShowcaseSidebar from '@/components/organisms/ShowcaseSidebar'
@@ -11,7 +12,7 @@ const baseItemsBg = [
 
 export default function Tela3() {
   return (
-    <div className="flex">
+    <div className="flex justify-between">
       <aside>
         <NavSidebar />
       </aside>
@@ -25,8 +26,13 @@ export default function Tela3() {
             fontSize="smm"
           />
         </div>
+
+        <div className="mt-10 flex flex-col gap-4">
+          <ContributionsCard />
+          <ContributionsCard />
+        </div>
       </main>
-      <aside className="ml-4">
+      <aside className="mx-4 justify-self-end">
         <ShowcaseSidebar />
       </aside>
     </div>

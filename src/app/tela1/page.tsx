@@ -67,7 +67,7 @@ const companiesInfo: companiesType[] = [
 
 export default function Tela1() {
   return (
-    <div className="flex">
+    <div className="flex justify-between">
       <aside>
         <NavSidebar />
       </aside>
@@ -100,6 +100,7 @@ export default function Tela1() {
           )}
         </div>
       </main>
+      <div className="w-full max-w-[200px]" />
     </div>
   )
 }
