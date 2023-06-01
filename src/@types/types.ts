@@ -18,3 +18,8 @@ export type TextStyles = {
     | 'xlb'
   as?: 'p' | 'span'
 }
+
+export type StepsItemType = {
+  progress: 'done' | 'current' | 'next'
+  processName: string
+}
