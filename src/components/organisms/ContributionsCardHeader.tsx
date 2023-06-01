@@ -37,7 +37,7 @@ export default function ContributionsCardHeader({
       {closed && (
         <div className="ml-auto flex gap-2 text-gray-500">
           <MoneyCircle />
-          <Text fontStyle="xsr">2 aportes</Text>
+          <Text fontStyle="xsr">4 aportes</Text>
         </div>
       )}
       <Image

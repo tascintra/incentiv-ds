@@ -6,10 +6,34 @@ import ContributionsCard from '@/components/organisms/ContributionsCard'
 import NavSidebar from '@/components/organisms/NavSidebar'
 import ProjectShowcase from '@/components/organisms/ProjectShowcase'
 import ShowcaseSidebar from '@/components/organisms/ShowcaseSidebar'
+import SulamericaLogo from '@/assets/logo/sulamerica.svg'
+import KablinLogo from '@/assets/logo/kablin.svg'
+import NubankLogo from '@/assets/logo/nubank.svg'
 
 const baseItemsBg = [
   { label: 'Captado via Incentiv' },
   { label: 'Captação externa' },
+]
+
+const companies = [
+  {
+    companyLogo: SulamericaLogo,
+    companyName: 'Sulamerica',
+    totalValue: '700.000,00',
+    contributions: 4,
+  },
+  {
+    companyLogo: KablinLogo,
+    companyName: 'Klabin',
+    totalValue: '700.000,00',
+    contributions: 2,
+  },
+  {
+    companyLogo: NubankLogo,
+    companyName: 'Nubank',
+    totalValue: '700.000,00',
+    contributions: 3,
+  },
 ]
 
 export default function Tela3() {
@@ -27,12 +51,15 @@ export default function Tela3() {
             className="max-w-xs text-gray-900"
             fontSize="smm"
           />
-          <ButtonOutlined iconLeft={<PlusSign />}>Adicionar captação</ButtonOutlined>
+          <ButtonOutlined iconLeft={<PlusSign />}>
+            Adicionar captação
+          </ButtonOutlined>
         </div>
 
         <div className="mt-10 flex flex-col gap-4">
-          <ContributionsCard />
-          <ContributionsCard />
+          {companies.map((company) => (
+            <ContributionsCard key={company.companyName} />
+          ))}
         </div>
       </main>
       <aside className="mx-4 justify-self-end">

@@ -27,25 +27,39 @@ export default function ContributionsCard() {
   const [closed, setClosed] = useState(true)
 
   return (
-    <ul className={clsx(!closed ? 'h-full' : 'h-[70px]', 'overflow-hidden', 'bg-white')}>
+    <ul
+      className={clsx(
+        !closed ? 'h-full' : 'h-[70px]',
+        'overflow-hidden',
+        'bg-white'
+      )}
+    >
       <ContributionsCardHeader
         onClick={() => setClosed(!closed)}
         closed={closed}
       />
       <div
         className={clsx(
-          'grid grid-cols-cardTable gap-x-32 gap-y-6 rounded-b-lg border border-t-0 border-gray-300 p-6'
+          'flex flex-col gap-6 divide-y rounded-b-lg border border-t-0 border-gray-300 p-6'
         )}
       >
-        {contributionsInfo.map((info) =>
-          info.map(({ infoHeader, infoText }) => (
-            <ContributionsCardContribution
-              key={infoHeader}
-              infoHeader={infoHeader}
-              infoText={infoText}
-            />
-          ))
-        )}
+        {contributionsInfo.map((_, index) => (
+          <div
+            key={Math.random()}
+            className={clsx(
+              index === 1 && 'pt-6',
+              'grid grid-cols-cardTable gap-x-32 gap-y-6'
+            )}
+          >
+            {contributionsInfo[index].map(({ infoHeader, infoText }) => (
+              <ContributionsCardContribution
+                key={Math.random()}
+                infoHeader={infoHeader}
+                infoText={infoText}
+              />
+            ))}
+          </div>
+        ))}
       </div>
     </ul>
   )
