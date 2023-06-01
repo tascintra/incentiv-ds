@@ -5,6 +5,7 @@ import Text from '@/components/atoms/Text'
 import InputBox from '@/components/organisms/InputBox'
 import NavbarCloseModal from '@/components/molecules/NavbarCloseModal'
 import SidebarStepsItems from '@/components/organisms/SidebarStepsItems'
+import Button from '@/components/molecules/Button'
 
 interface IInputInfos {
   requiredField: boolean
@@ -91,18 +92,33 @@ export default function Tela2() {
             </header>
 
             <form onSubmit={handleSubmit} className="mt-12">
-              <div className="grid grid-cols-2 grid-rows-5 gap-8 [&>*:nth-child(n+5)]:col-custom">
+              <div className="grid grid-cols-2 grid-rows-5 items-end gap-8 [&>*:nth-child(6)]:col-custom [&>button:nth-child(odd)]:-ml-6">
                 {inputInfos.map(
-                  ({ icon, id, label, placeholder, requiredField }) => (
-                    <InputBox
-                      key={id}
-                      id={id}
-                      label={label}
-                      placeholder={placeholder}
-                      required={requiredField}
-                      rightIcon={icon}
-                    />
-                  )
+                  ({ icon, id, label, placeholder, requiredField }, index) =>
+                    index <= 4 ? (
+                      <InputBox
+                        key={id}
+                        id={id}
+                        label={label}
+                        placeholder={placeholder}
+                        required={requiredField}
+                        rightIcon={icon}
+                      />
+                    ) : (
+                      <>
+                        <InputBox
+                          key={id}
+                          id={id}
+                          label={label}
+                          placeholder={placeholder}
+                          required={requiredField}
+                          rightIcon={icon}
+                        />
+                        <Button className="max-h-12 max-w-[120px]">
+                          + Adicionar
+                        </Button>
+                      </>
+                    )
                 )}
               </div>
             </form>
