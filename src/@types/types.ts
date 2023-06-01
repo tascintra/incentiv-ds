@@ -1,7 +1,5 @@
-import { ReactNode } from 'react'
-
 export interface CommonTextProps {
-  children: ReactNode
+  children: React.ReactNode
   className?: string
 }
 
@@ -22,4 +20,11 @@ export type TextStyles = {
 export type StepsItemType = {
   progress: 'done' | 'current' | 'next'
   processName: string
+}
+
+export type CompanyType = {
+  companyLogo: HTMLImageElement
+  companyName: string
+  totalValue: string
+  contributions: number
 }

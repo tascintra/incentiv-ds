@@ -1,4 +1,7 @@
 import PlusSign from '@/assets/icon/PlusSign'
+import SulamericaLogo from '@/assets/logo/sulamerica.svg'
+import KablinLogo from '@/assets/logo/kablin.svg'
+import NubankLogo from '@/assets/logo/nubank.svg'
 import ButtonOutlined from '@/components/molecules/ButtonOutlined'
 import Breadcrumb from '@/components/organisms/Breadcrumb'
 import ButtonGroup from '@/components/organisms/ButtonGroup'
@@ -6,9 +9,6 @@ import ContributionsCard from '@/components/organisms/ContributionsCard'
 import NavSidebar from '@/components/organisms/NavSidebar'
 import ProjectShowcase from '@/components/organisms/ProjectShowcase'
 import ShowcaseSidebar from '@/components/organisms/ShowcaseSidebar'
-import SulamericaLogo from '@/assets/logo/sulamerica.svg'
-import KablinLogo from '@/assets/logo/kablin.svg'
-import NubankLogo from '@/assets/logo/nubank.svg'
 
 const baseItemsBg = [
   { label: 'Captado via Incentiv' },
@@ -57,9 +57,17 @@ export default function Tela3() {
         </div>
 
         <div className="mt-10 flex flex-col gap-4">
-          {companies.map((company) => (
-            <ContributionsCard key={company.companyName} />
-          ))}
+          {companies.map(
+            ({ companyLogo, companyName, contributions, totalValue }) => (
+              <ContributionsCard
+                key={companyName}
+                companyLogo={companyLogo}
+                companyName={companyName}
+                contributions={contributions}
+                totalValue={totalValue}
+              />
+            )
+          )}
         </div>
       </main>
       <aside className="mx-4 justify-self-end">

@@ -1,6 +1,7 @@
 'use client'
 import { useState } from 'react'
 import clsx from 'clsx'
+import { CompanyType } from '@/@types/types'
 import ContributionsCardHeader from '@/components/organisms/ContributionsCardHeader'
 import ContributionsCardContribution from '@/components/organisms/ContributionsCardContribution'
 
@@ -23,7 +24,12 @@ const contributionsInfo = [
   ],
 ]
 
-export default function ContributionsCard() {
+export default function ContributionsCard({
+  companyLogo,
+  companyName,
+  contributions,
+  totalValue,
+}: CompanyType) {
   const [closed, setClosed] = useState(true)
 
   return (
@@ -37,6 +43,10 @@ export default function ContributionsCard() {
       <ContributionsCardHeader
         onClick={() => setClosed(!closed)}
         closed={closed}
+        companyLogo={companyLogo}
+        companyName={companyName}
+        contributions={contributions}
+        totalValue={totalValue}
       />
       <div
         className={clsx(

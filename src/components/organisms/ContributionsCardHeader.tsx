@@ -1,21 +1,26 @@
 import Image from 'next/image'
 import clsx from 'clsx'
-import SulamericaLogo from '@/assets/logo/sulamerica.svg'
+import { CompanyType } from '@/@types/types'
 import Arrow from '@/assets/icon/arrow.svg'
 import MoneyCircle from '@/assets/icon/MoneyCircle'
 import Text from '@/components/atoms/Text'
 
 interface ContributionsCardHeaderProps
   extends React.DetailedHTMLProps<
-    React.LiHTMLAttributes<HTMLLIElement>,
-    HTMLLIElement
-  > {
+      React.LiHTMLAttributes<HTMLLIElement>,
+      HTMLLIElement
+    >,
+    CompanyType {
   closed: boolean
 }
 
 export default function ContributionsCardHeader({
   closed,
   onClick,
+  companyLogo,
+  companyName,
+  totalValue,
+  contributions,
 }: ContributionsCardHeaderProps) {
   return (
     <li
@@ -25,19 +30,19 @@ export default function ContributionsCardHeader({
         'flex cursor-pointer items-center gap-3 border border-gray-300 px-6 py-3'
       )}
     >
-      <Image src={SulamericaLogo} alt="Sulamerica Logo" />
+      <Image src={companyLogo} alt="Sulamerica Logo" />
       <div>
         <Text fontStyle="mds" className="text-gray-900">
-          Sulamerica
+          {companyName}
         </Text>
         <Text fontStyle="smr" className="text-gray-600">
-          Valor Total: R$ 700.000,00
+          Valor Total: R$ {totalValue}
         </Text>
       </div>
       {closed && (
         <div className="ml-auto flex gap-2 text-gray-500">
           <MoneyCircle />
-          <Text fontStyle="xsr">4 aportes</Text>
+          <Text fontStyle="xsr">{contributions} aportes</Text>
         </div>
       )}
       <Image

@@ -76,13 +76,13 @@ export default function Tela2() {
 
   return (
     <>
-      <NavbarCloseModal />
-      <div className="m-auto flex max-w-7xl justify-between">
-        <aside className="m-auto h-screen w-full max-w-[280px] shadow-border-r">
+      <NavbarCloseModal className="px-5" />
+      <div className="m-auto mb-12 flex h-screen max-w-7xl justify-between px-5">
+        <aside className="m-auto min-h-[916px] w-full max-w-[280px] shadow-border-r">
           <SidebarStepsItems className="mt-14" />
         </aside>
         <main className="w-full">
-          <div className="ml-auto mt-12 max-w-[800px]">
+          <div className="ml-auto mt-12 max-w-[800px] pl-5">
             <header>
               <Text fontStyle="smr" className="text-neutral-500">
                 Cadastro de Projeto
