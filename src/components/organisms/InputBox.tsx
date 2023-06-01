@@ -1,6 +1,6 @@
-import Information from '@/assets/icon/Information'
-import Text from '../atoms/Text'
 import clsx from 'clsx'
+import Information from '@/assets/icon/Information'
+import Text from '@/components/atoms/Text'
 
 interface InputBoxProps
   extends React.DetailedHTMLProps<

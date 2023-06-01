@@ -20,6 +20,7 @@ module.exports = {
       colors: {
         primary: {
           50: '#E8F1FC',
+          300: '#83B5E6',
           500: '#1B74E4',
           600: '#165DB6',
         },
@@ -54,11 +55,16 @@ module.exports = {
         xs: '0px 1px 2px rgba(16, 24, 40, 0.05)',
         'border-b': 'inset 0px -1px 0px #D4D4D4',
         'border-r': '1px 0px 0px #D4D4D4',
+        'input-focus': '0px 0px 0px 4px #E1E1FE',
       },
 
       gridTemplateColumns: {
         cardTable: 'repeat(2, minmax(0, 1fr)) min-content',
       },
+
+      gridColumn: {
+        custom: '1'
+      }
     },
   },
   plugins: [],

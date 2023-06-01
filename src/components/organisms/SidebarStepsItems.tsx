@@ -1,5 +1,5 @@
-import StepsItem from '../molecules/StepsItem'
 import { StepsItemType } from '@/@types/types'
+import StepsItem from '@/components/molecules/StepsItem'
 
 interface StepsItemsProps
   extends React.DetailedHTMLProps<

@@ -25,7 +25,7 @@ export default function StepsItem({
 }: StepsItemProps) {
   const iconsType: IIcons = {
     done: <Subtract />,
-    current: <CircleIcon />,
+    current: <CircleIcon className="stroke-neutral-800" />,
     next: <CircleIcon className="stroke-neutral-300" />,
   }
 
@@ -39,7 +39,11 @@ export default function StepsItem({
 
   return (
     <li
-      className={clsx('flex items-center gap-4', progressStyle[progress], className)}
+      className={clsx(
+        'flex items-center gap-4',
+        progressStyle[progress],
+        className
+      )}
       {...props}
     >
       {Icon}

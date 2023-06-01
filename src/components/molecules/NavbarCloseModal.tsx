@@ -5,13 +5,13 @@ import EducationPencil from '@/assets/icon/EducationPencil'
 
 interface NavbarCloseModalProps
   extends React.DetailedHTMLProps<
-    React.HTMLAttributes<HTMLElement>,
-    HTMLElement
+    React.HTMLAttributes<HTMLDivElement>,
+    HTMLDivElement
   > {}
 
 export default function NavbarCloseModal(props: NavbarCloseModalProps) {
   return (
-    <header className="py-4 shadow-border-b" {...props}>
+    <div className="py-4 shadow-border-b" {...props}>
       <div className="m-auto flex max-w-7xl justify-between">
         <Link href="/">
           <Image src={LogoIncentiv} alt="Logo Incentiv" />
@@ -21,6 +21,6 @@ export default function NavbarCloseModal(props: NavbarCloseModalProps) {
           <EducationPencil className="cursor-pointer" />
         </Link>
       </div>
-    </header>
+    </div>
   )
 }
