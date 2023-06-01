@@ -6,6 +6,7 @@ import InputBox from '@/components/organisms/InputBox'
 import NavbarCloseModal from '@/components/molecules/NavbarCloseModal'
 import SidebarStepsItems from '@/components/organisms/SidebarStepsItems'
 import Button from '@/components/molecules/Button'
+import ArrowRight from '@/assets/icon/ArrowRight'
 
 interface IInputInfos {
   requiredField: boolean
@@ -120,6 +121,16 @@ export default function Tela2() {
                       </>
                     )
                 )}
+              </div>
+              <div className="mt-12 flex gap-2">
+                <Button colorScheme="neutral">Voltar</Button>
+                <Button
+                  colorScheme="blue"
+                  variant="solid"
+                  rightIcon={<ArrowRight />}
+                >
+                  Próxima etapa
+                </Button>
               </div>
             </form>
           </div>
