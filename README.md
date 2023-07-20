@@ -1,15 +1,15 @@
 <h1 align="center"> Incentiv-ds </h1>
 
 <p align="center">
-Um code test para vaga de desenvolvedor Front-End na Incentiv.
+Code test para vaga de desenvolvedor Front-End na Incentiv.
 </p>
 
 <p align="center">
-  <a href="#-the-challenge">O Desafio</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
-  <a href="#-learning-goals">Funcionalidades</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
-  <a href="#-technologies">Tecnologias</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+  <a href="#-o-desafio">O Desafio</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+  <a href="#-funcionalidades">Funcionalidades</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+  <a href="#-tecnologias">Tecnologias</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
   <a href="#-deploy">Deploy</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
-  <a href="#-project">Projeto</a>
+  <a href="#-projeto">Projeto</a>
 </p>
 
 <p align="center">
@@ -23,33 +23,31 @@ Um code test para vaga de desenvolvedor Front-End na Incentiv.
 <br>
 
 <p align="center">
-  <img alt="Notifications page project screenshot" src="./public/desktop-preview.png" width="100%">
+  <img alt="Printscreen tela inicial do projeto" src="./public/desktop-preview.png" width="100%">
 </p>
 
 <br>
 
-## 🏆 The challenge
+## 🏆 O Desafio
 
-The challenge was to build a React application that fetch products data from an API and show a products galery on main page, a contact page and a product details page.
-
-Users should be able to:
-
-- Navigate between pages visualizing info and images from an external API.
-- See product detail after clicking a product card on main page
-- View the optimal layout depending on their device's screen size
-- See hover and focus states for all interactive elements on the page
+O desafio era construir 3 páginas utilizando React no formato de design system dos quais os protótipos foram disponibilizados no [Figma](https://www.figma.com/file/qPPDuBJumrVGvssiRWyENf/Incentiv---Insights?type=design&node-id=0%3A1&mode=design&t=ZOhBSUTcYdA1ICkg-1).
 
 <br>
 
-## 🎯 Learning goals
+## 🎯 Funcionalidades
 
-Put my recent knowledge through its paces using most of the React tools I'm studying in the last couple of months such as Components, Hooks, CSS-in-JS and React Router.
+Os usuários devem ser capazes de:
+- Navegar pelas páginas visualizando os menus e componentes
+- Ativar estados dos menus, como o menu que foi selecionado, por exemplo
+- Ver estados de hover do mouse
+
+Obs.: Não foram disponibilizados protótipos da versão mobile, portanto não foi implementada versão mobile para o projeto.
 
 <br>
 
-## 🚀 Technologies
+## 🚀 Tecnologias
 
-This project was built using following libraries/frameworks:
+Este projeto foi construído utlizando as seguintes bibliotecas e frameworks:
 
 - React
 - Next
@@ -59,26 +57,27 @@ This project was built using following libraries/frameworks:
 
 ## 🌎 Deploy
 
-Live Site URL: [ranek-challenge](https://ranek-challenge-4mokm4i5j-tascintra.vercel.app/)
+URL do Live Site: [incentiv-ds](https://incentiv-ds.vercel.app/)
 
 <br>
 
-## 💻 Project
+## 💻 Projeto
 
-
-
----
-
-#### :memo: License
-
-This project is under a MIT license.
-
-
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+Este é um projeto [Next.js](https://nextjs.org/) inicializado com [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
 ## Getting Started
 
-First, run the development server:
+Primeiro, instale as dependências:
+
+```bash
+npm install
+# or
+yarn install
+# or
+pnpm install
+```
+
+Depois, inicialize o servidor de desenvolvimento:
 
 ```bash
 npm run dev
@@ -88,23 +87,12 @@ yarn dev
 pnpm dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Abra [http://localhost:3000](http://localhost:3000) com o seu navegador para ver o resultado.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+Este projeto utiliza [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) para otimizar automaticamente e carregar a Inter, uma fonte customizada do Google Font.
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+---
 
-## Learn More
+#### :memo: License
 
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+This project is under a MIT license.
